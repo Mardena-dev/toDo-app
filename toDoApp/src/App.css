@@ -1,0 +1,180 @@
+:root {
+  --primary-color: #245bff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+.taskField,
+.newTaskButton {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.taskField {
+  width: 300px;
+  height: 40px;
+  margin: 20px;
+  padding: 0 20px;
+  border-radius: 25px;
+  border: 1px solid grey;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  outline: none;
+}
+
+.taskField:hover {
+  border-color: grey;
+}
+
+.taskField:focus {
+  border-color: grey;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.newTaskButton {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid grey;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.newTaskButton:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  color: white;
+}
+
+.newTaskButton:focus {
+  border-color: grey;
+  outline: none;
+}
+
+.appContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.inputSection {
+  width: 45%;
+  display: block;
+}
+
+.remindersSection {
+  width: 50%;
+  justify-content: center;
+}
+
+.taskGroup h3 {
+  margin-bottom: 10px;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dateTimePickerContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.datePicker,
+.timePicker {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.newTaskButton {
+  margin-top: 10px;
+  width: 150px;
+}
+
+.taskField {
+  width: 400px;
+  padding: 0 20px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+
+
+/* For screens up to 900px */
+@media (max-width: 900px) {
+  .inputSection,
+  .remindersSection {
+    width: 100%;
+  }
+
+  .taskField {
+    width: 90%;
+  }
+
+  .newTaskButton {
+    width: 130px;
+  }
+
+  .dateTimePickerContainer {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .datePicker, .timePicker {
+    margin-left: 0;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+
+/* For screens up to 600px */
+@media (max-width: 600px) {
+  .taskField {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .newTaskButton {
+    width: 120px;
+    margin: 10px 0;
+  }
+
+  .dateTimePickerContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* For screens up to 400px */
+@media (max-width: 400px) {
+  .taskField {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .newTaskButton {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .dateTimePickerContainer {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .appContainer {
+    padding: 10px;
+  }
+}
